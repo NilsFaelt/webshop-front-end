@@ -10,7 +10,8 @@ export const Container = styled(DivFlexedColumn)`
 export const Bar = styled.div`
   width: 100%;
   height: 0.17rem;
-  background-color: grey;
+  margin-left: 1rem;
+  background-color: white;
   border: 0.05rem solid grey;
-  border-radius: 1rem;
+  border-radius: 0.1rem;
 `;

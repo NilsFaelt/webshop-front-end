@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <MainLayout>
       <ProductDisplayBig
+        textColor='white'
         mainText='GREEN FOOD'
         underText='Test our new menu'
         infoText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, natus enim provident iusto esse impedit voluptas vitae optio molestiae at tempora nihil cumque corporis laudantium debitis dolorum fugit voluptatum repudiandae!'

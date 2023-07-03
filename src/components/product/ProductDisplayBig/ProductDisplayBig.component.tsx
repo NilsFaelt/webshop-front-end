@@ -14,9 +14,11 @@ interface Props {
   infoText?: string;
   imageUrl: string;
   linkUrl?: string;
+  textColor?: "white";
 }
 
 export const ProductDisplayBig: FC<Props> = ({
+  textColor = "black",
   mainText,
   underText,
   infoText,
@@ -25,7 +27,7 @@ export const ProductDisplayBig: FC<Props> = ({
 }) => {
   return (
     <Container imageUrl={imageUrl}>
-      <TextContainer>
+      <TextContainer color={textColor}>
         <MainText>{mainText}</MainText>
         <UnderText>{underText && underText}</UnderText>
         <InfoText>{infoText && infoText}</InfoText>

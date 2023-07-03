@@ -13,6 +13,7 @@ export const Container = styled(DivFlexedColumn)<{ imageUrl: string }>`
 `;
 
 export const TextContainer = styled(DivFlexedColumn)`
+  color: ${(props) => props.color};
   align-items: flex-start;
   gap: 2rem;
 `;

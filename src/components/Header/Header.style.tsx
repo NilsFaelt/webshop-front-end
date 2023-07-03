@@ -12,7 +12,7 @@ export const Container = styled.header`
   align-items: center;
   padding: 1rem;
   width: 100%;
-  height: 5rem;
+  height: 4rem;
 
   background-color: rgba(255, 255, 255, 0.1);
   &:hover {
