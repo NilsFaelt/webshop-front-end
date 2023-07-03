@@ -13,15 +13,14 @@ export const Container = styled.header`
   padding: 1rem;
   width: 100%;
   height: 4rem;
-
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 1);
   &:hover {
     background-color: rgba(255, 255, 255, 1);
     transition: 1s;
   }
   &:not(:hover) {
     border-bottom: 0rem solid grey;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 1);
     transition: 1s;
   }
 `;

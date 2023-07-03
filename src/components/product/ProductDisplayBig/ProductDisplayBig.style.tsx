@@ -1,10 +1,10 @@
 import { styled } from "styled-components";
 import { DivFlexedColumn } from "@/src/styles";
 import { theme } from "@/src/styles";
-export const Container = styled(DivFlexedColumn)<{ imageUrl: string }>`
+export const Container = styled(DivFlexedColumn)<{ $imageurl: string }>`
   align-items: flex-start;
   box-sizing: border-box;
-  background-image: url(${(props) => props.imageUrl});
+  background-image: url(${(props) => props.$imageurl});
   background-size: cover;
   background-position: center;
   padding: 2rem;

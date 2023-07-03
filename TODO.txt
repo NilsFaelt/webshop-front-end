@@ -1,7 +1,5 @@
-* setup styled-components
 * redux
 * tanstack
-* header
 * footer
 * menu
 * login
@@ -13,4 +11,3 @@
 * detail product
 * add fonts 
 * add svg
-* mainproductdisplay

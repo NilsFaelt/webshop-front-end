@@ -21,6 +21,7 @@ export const menuSlice = createSlice({
       state.toogleMenu = !state.toogleMenu;
       state.toogleCart = false;
       state.toogleSearch = false;
+      console.log(state);
     },
     toogleSearch: (state) => {
       state.toogleSearch = !state.toogleSearch;

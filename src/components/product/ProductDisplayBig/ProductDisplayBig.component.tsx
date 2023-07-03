@@ -26,7 +26,7 @@ export const ProductDisplayBig: FC<Props> = ({
   linkUrl,
 }) => {
   return (
-    <Container imageUrl={imageUrl}>
+    <Container $imageurl={imageUrl}>
       <TextContainer color={textColor}>
         <MainText>{mainText}</MainText>
         <UnderText>{underText && underText}</UnderText>
