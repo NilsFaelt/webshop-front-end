@@ -1,2 +1,2 @@
 export * from "./Header";
-export * from "./product";
+export * from "./Product";

@@ -1,9 +1,31 @@
 import { styled } from "styled-components";
-
-export const Container = styled.div`
-  background-image: url("https://plus.unsplash.com/premium_photo-1675011400491-d94d368559fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1429&q=80");
+import { DivFlexedColumn } from "@/src/styles";
+import { theme } from "@/src/styles";
+export const Container = styled(DivFlexedColumn)<{ imageUrl: string }>`
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-image: url(${(props) => props.imageUrl});
   background-size: cover;
   background-position: center;
+  padding: 2rem;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
+`;
+
+export const TextContainer = styled(DivFlexedColumn)`
+  align-items: flex-start;
+  gap: 2rem;
+`;
+export const MainText = styled.h2`
+  margin: 0;
+  font-size: calc(0.8rem + 0.5vw);
+`;
+export const UnderText = styled.p`
+  margin: 0;
+  font-size: calc(0.7rem + 0.5vw);
+`;
+export const InfoText = styled.p`
+  font-size: calc(0.5rem + 0.5vw);
+  width: clamp(15rem, 40%, 50rem);
+  box-sizing: border-box;
 `;

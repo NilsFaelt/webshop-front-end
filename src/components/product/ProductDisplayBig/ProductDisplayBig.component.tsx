@@ -1,6 +1,36 @@
 import React, { FC } from "react";
-import { Container } from "./ProductDisplayBig.style";
+import {
+  Container,
+  TextContainer,
+  MainText,
+  UnderText,
+  InfoText,
+} from "./ProductDisplayBig.style";
+import { GenericButton } from "@/src/ui";
 
-export const ProductDisplayBig: FC = () => {
-  return <Container></Container>;
+interface Props {
+  mainText: string;
+  underText?: string;
+  infoText?: string;
+  imageUrl: string;
+  linkUrl?: string;
+}
+
+export const ProductDisplayBig: FC<Props> = ({
+  mainText,
+  underText,
+  infoText,
+  imageUrl,
+  linkUrl,
+}) => {
+  return (
+    <Container imageUrl={imageUrl}>
+      <TextContainer>
+        <MainText>{mainText}</MainText>
+        <UnderText>{underText && underText}</UnderText>
+        <InfoText>{infoText && infoText}</InfoText>
+      </TextContainer>
+      <GenericButton text='DISPLAY MORE' onClick={() => console.log("")} />
+    </Container>
+  );
 };
