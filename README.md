@@ -1,35 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fullstack Project - Front-end Development Showcase
 
-## Getting Started
+This project showcases my skills as a front-end developer, where I have taken on multiple roles, including front-end development, backend development, design, and authentication implementation. The goal of this project is to demonstrate my proficiency in various technologies and libraries.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Typescript:** I have utilized TypeScript to add static typing and enhance the development experience.
+- **Next.js:** The project is built using Next.js, a React framework that enables server-side rendering and efficient client-side navigation.
+- **Styled Components:** I have used Styled Components to create and manage the styling of the components in a modular and reusable way.
+- **Klarna:** Integration with Klarna has been implemented to enable seamless payment processing and enhance the user experience.
+- **Stripe:** Stripe is used for secure payment handling and processing.
+- **Contentful (CMS):** Contentful is integrated as a headless CMS to easily manage and update content for the application.
+- **Nest (Node Backend):** I have developed the backend using Nest, a powerful Node.js framework that facilitates the creation of scalable and maintainable server-side logic.
+- **MongoDB:** MongoDB is utilized as the database to store and manage application data.
+- **Prisma:** Prisma is used as an ORM (Object-Relational Mapping) tool to interact with the database and handle data modeling and querying.
+- **Redux:** Redux is employed as a state management library to efficiently manage the application's global state.
+- **Tanstack:** Tanstack is used for authentication implementation, where I have developed the authentication flow from scratch.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scalability and Component Independence
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I have designed the project with scalability in mind, ensuring that each component is independent and has minimal dependencies on other components. This approach enhances code maintainability, reusability, and flexibility. The project is structured to maximize modularity and ease of development.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Image Credits
 
-## Learn More
+Please note that the images used in the project are not my own. Proper attribution and credits have been given to the respective image sources.
 
-To learn more about Next.js, take a look at the following resources:
+This project serves as a testament to my skills as a developer and showcases my ability to create highly scalable and maintainable applications. It demonstrates my proficiency in a wide range of technologies, from front-end frameworks like Next.js to backend technologies like Nest and MongoDB.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# webshop-front-end
