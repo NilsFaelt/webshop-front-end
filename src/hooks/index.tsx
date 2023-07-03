@@ -1,0 +1,1 @@
+export { useCloseOnClickOutsideElement } from "./useCloseOnClickOutsideElement";

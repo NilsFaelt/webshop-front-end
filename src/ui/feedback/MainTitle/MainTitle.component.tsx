@@ -6,8 +6,8 @@ export const MainTitle: FC = () => {
   return (
     <StyledLink href={"/"}>
       <Container>
-        <Title>GREEN FUTURE</Title>
-        <UnderTitle>ASSOSCIATED</UnderTitle>
+        <Title>LANOA </Title>
+        <UnderTitle>GREEN LIFE</UnderTitle>
       </Container>
     </StyledLink>
   );

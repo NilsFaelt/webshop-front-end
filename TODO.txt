@@ -11,3 +11,5 @@
 * detail product
 * add fonts 
 * add svg
+* search
+* cart

@@ -32,7 +32,7 @@ export const ProductDisplayBig: FC<Props> = ({
         <UnderText>{underText && underText}</UnderText>
         <InfoText>{infoText && infoText}</InfoText>
       </TextContainer>
-      <GenericButton text='DISPLAY MORE' onClick={() => console.log("")} />
+      <GenericButton text='DISCOVER MORE' onClick={() => console.log("")} />
     </Container>
   );
 };
