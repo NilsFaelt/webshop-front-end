@@ -6,6 +6,8 @@
 * contentful
 * nest 
 * jwt
+* prisma
+* mongo
 * display prodcutcard
 * detail product
 * search
