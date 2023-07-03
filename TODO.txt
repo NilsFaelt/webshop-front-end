@@ -3,13 +3,10 @@
 * footer
 * menu
 * login
-* display 
 * contentful
 * nest 
 * jwt
 * display prodcutcard
 * detail product
-* add fonts 
-* add svg
 * search
 * cart

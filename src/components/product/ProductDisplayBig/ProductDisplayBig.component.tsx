@@ -25,6 +25,7 @@ export const ProductDisplayBig: FC<Props> = ({
   imageUrl,
   linkUrl,
 }) => {
+  const handleClick = () => {};
   return (
     <Container $imageurl={imageUrl}>
       <TextContainer color={textColor}>
