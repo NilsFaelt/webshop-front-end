@@ -8,8 +8,9 @@ import { useCloseOnClickOutsideElement } from "@/src/hooks";
 import { EachNav } from "./EachNav";
 
 export const Menu: FC = () => {
-  const menuActive = useSelector((state: RootState) => state.menu.toogleMenu);
   const dispatch = useDispatch();
+  const menuActive = useSelector((state: RootState) => state.menu.toogleMenu);
+
   const menuRef = useRef(null);
   const hanldeDispatch = () => {
     dispatch(toogleMenu());
@@ -17,7 +18,7 @@ export const Menu: FC = () => {
 
   const navOneLinks = [
     { name: "Sign in", url: "sign-in" },
-    { name: "Sign out", url: "sign-in" },
+    { name: "Sign out", url: "sign-out" },
   ];
   const navTwoLinks = [
     { name: "Sign in", url: "sign-in" },

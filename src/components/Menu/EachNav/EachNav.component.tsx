@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import { Container, InnerLink, Text, TextContainer } from "./EachNav.style";
-import { toogleMenu } from "@/src/redux/slices";
+import { useDispatch } from "react-redux";
+import { toogleMenu as toogleMenuSlice } from "@/src/redux/slices";
 
 interface Props {
   text: string;
@@ -8,7 +9,9 @@ interface Props {
 }
 
 export const EachNav: FC<Props> = ({ text, innerLink }) => {
+  const dispatch = useDispatch();
   const [toogleMenu, settoogleMenu] = useState(false);
+
   return (
     <Container>
       <TextContainer onClick={() => settoogleMenu(!toogleMenu)}>
@@ -19,7 +22,11 @@ export const EachNav: FC<Props> = ({ text, innerLink }) => {
         toogleMenu &&
         innerLink.map((each, i) => {
           return (
-            <InnerLink key={i} href={each.url}>
+            <InnerLink
+              onClick={() => dispatch(toogleMenuSlice())}
+              key={i}
+              href={each.url}
+            >
               {each.name}
             </InnerLink>
           );

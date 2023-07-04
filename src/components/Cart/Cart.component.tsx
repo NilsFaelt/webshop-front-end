@@ -1,6 +1,6 @@
+"use client";
 import React, { FC, useRef } from "react";
 import { CloseText, Container, CartText, InfoContainer } from "./Cart.style";
-
 import { useDispatch } from "react-redux";
 import { toogleCart } from "@/src/redux/slices";
 import { useCloseOnClickOutsideElement } from "@/src/hooks";

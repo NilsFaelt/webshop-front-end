@@ -16,7 +16,7 @@ export const Container = styled.button`
   align-items: center;
   justify-content: center;
   border: 0.05rem solid black;
-  min-width: calc(2rem + 2vw);
+  min-width: calc(10rem + 2vw);
   height: 3rem;
   padding-left: 4vw;
   padding-right: 4vw;
