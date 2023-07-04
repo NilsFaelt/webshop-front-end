@@ -5,7 +5,6 @@ export const Container = styled(DivFlexedColumn)`
   width: 100%;
   height: 80%;
   justify-content: flex-start;
-
   background-image: url("https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
   background-size: cover;
   background-position: center;

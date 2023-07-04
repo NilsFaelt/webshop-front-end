@@ -4,11 +4,18 @@ import { Container, StyledInput, StyledImage } from "./Input.style";
 interface Props {
   placeholder: string;
   type: string;
+  value: string;
   inputRef?: any;
   setInput: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const Input: FC<Props> = ({ placeholder, type, inputRef, setInput }) => {
+export const Input: FC<Props> = ({
+  placeholder,
+  type,
+  inputRef,
+  setInput,
+  value,
+}) => {
   return (
     <Container>
       <StyledInput
@@ -18,6 +25,7 @@ export const Input: FC<Props> = ({ placeholder, type, inputRef, setInput }) => {
         ref={inputRef}
         placeholder={placeholder}
         type={type}
+        value={value}
       />
     </Container>
   );
