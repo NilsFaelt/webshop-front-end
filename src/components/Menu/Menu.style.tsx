@@ -1,4 +1,4 @@
-import { theme } from "@/src/styles";
+import { DivFlexedColumn, DivFlexedRow, theme } from "@/src/styles";
 
 import styled, { keyframes } from "styled-components";
 
@@ -32,6 +32,11 @@ export const Container = styled.nav`
   @media (max-width: 500px) {
     width: 100%;
   }
+`;
+export const NavContainer = styled(DivFlexedColumn)`
+  margin-top: 8rem;
+  align-self: center;
+  justify-self: center;
 `;
 export const CloseText = styled.p`
   position: absolute;
