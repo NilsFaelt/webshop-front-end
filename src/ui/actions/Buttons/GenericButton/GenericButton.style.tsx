@@ -23,6 +23,7 @@ export const Container = styled.button`
   font-size: calc(0.5rem + 0.2vw);
   cursor: pointer;
   color: black;
+  background-color: white;
   background-image: linear-gradient(
     to right,
     ${theme.colors.primary},

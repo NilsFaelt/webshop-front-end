@@ -21,7 +21,7 @@ export const Menu: FC = () => {
     { name: "Sign out", url: "sign-out" },
   ];
   const navTwoLinks = [
-    { name: "Sign in", url: "sign-in" },
+    { name: "Products", url: "product" },
     { name: "Sign out", url: "sign-in" },
   ];
   const navThreeLinks = [
@@ -34,8 +34,8 @@ export const Menu: FC = () => {
       <CloseText onClick={() => dispatch(toogleMenu())}>X</CloseText>
       <NavContainer>
         <EachNav innerLink={navOneLinks} text='Login' />
-        <EachNav innerLink={navTwoLinks} text='About' />
-        <EachNav innerLink={navThreeLinks} text='Shop' />
+        <EachNav innerLink={navTwoLinks} text='Shop' />
+        <EachNav innerLink={navThreeLinks} text='About' />
       </NavContainer>
     </Container>
   );

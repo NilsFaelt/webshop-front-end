@@ -1,4 +1,6 @@
 "use client";
+import { MainLayout } from "@/src";
+import { SingleProductView } from "@/src/features/Product";
 import React, { FC } from "react";
 
 interface Props {
@@ -8,9 +10,11 @@ interface Props {
 }
 
 const Page: FC<Props> = ({ params }) => {
-  console.log(params.id);
-
-  return <div>nils</div>;
+  return (
+    <MainLayout>
+      <SingleProductView />
+    </MainLayout>
+  );
 };
 
 export default Page;

@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { GlobalStyles } from "../src/styles";
 import { store } from "../src/redux";
 import { ABeeZee } from "@next/font/google";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import StyledComponentsRegistry from "./registry";
 
 const aBeeZee = ABeeZee({
@@ -15,16 +16,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const queryClient = new QueryClient();
   return (
     <html lang='en'>
       <Provider store={store}>
-        <body className={aBeeZee.className}>
-          <StyledComponentsRegistry>
-            {" "}
-            <GlobalStyles />
-            {children}
-          </StyledComponentsRegistry>
-        </body>
+        <QueryClientProvider client={queryClient}>
+          <body className={aBeeZee.className}>
+            <StyledComponentsRegistry>
+              {" "}
+              <GlobalStyles />
+              {children}
+            </StyledComponentsRegistry>
+          </body>
+        </QueryClientProvider>
       </Provider>
     </html>
   );
