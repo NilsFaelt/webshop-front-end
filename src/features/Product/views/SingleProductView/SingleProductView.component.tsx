@@ -1,6 +1,16 @@
 import React, { FC } from "react";
 import { Container } from "./SingleProductView.style";
+import { useProduct } from "../../hooks";
+import { DetailedProduct } from "@/src/components";
 
-export const SingleProductView: FC = () => {
-  return <Container>SingleProductView</Container>;
+interface Props {
+  id: string;
+}
+
+export const SingleProductView: FC<Props> = ({ id }) => {
+  return (
+    <Container>
+      <DetailedProduct id={id} />
+    </Container>
+  );
 };

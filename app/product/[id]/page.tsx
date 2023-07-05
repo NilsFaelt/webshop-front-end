@@ -10,9 +10,10 @@ interface Props {
 }
 
 const Page: FC<Props> = ({ params }) => {
+  if (!params.id) return null;
   return (
     <MainLayout>
-      <SingleProductView />
+      <SingleProductView id={params.id} />
     </MainLayout>
   );
 };

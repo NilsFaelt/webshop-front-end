@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { styled } from "styled-components";
 
 export const DivFlexedRow = styled.div`
@@ -11,4 +12,8 @@ export const DivFlexedColumn = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+export const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
 `;

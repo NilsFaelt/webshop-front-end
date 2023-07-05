@@ -17,11 +17,11 @@ export const Menu: FC = () => {
   };
 
   const navOneLinks = [
-    { name: "Sign in", url: "sign-in" },
+    { name: "Sign in", url: "/sign-in" },
     { name: "Sign out", url: "sign-out" },
   ];
   const navTwoLinks = [
-    { name: "Products", url: "product" },
+    { name: "Products", url: "/product" },
     { name: "Sign out", url: "sign-in" },
   ];
   const navThreeLinks = [

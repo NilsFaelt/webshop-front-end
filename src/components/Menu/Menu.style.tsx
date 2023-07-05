@@ -21,7 +21,7 @@ const slideOut = keyframes`
 
 export const Container = styled.nav`
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   top: 0;
   left: 0;
   width: calc(20rem + 10vw);

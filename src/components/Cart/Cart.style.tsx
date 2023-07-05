@@ -22,7 +22,7 @@ const slideOut = keyframes`
 export const Container = styled(DivFlexedColumn)`
   justify-content: flex-start;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   top: 0;
   right: 0;
   width: calc(20rem + 10vw);

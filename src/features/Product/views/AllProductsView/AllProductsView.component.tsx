@@ -6,7 +6,6 @@ import { EachProduct } from "@/src/components";
 
 export const AllProductsView: FC = () => {
   const { data } = useProducts();
-  console.log(data && data[0].fields);
 
   return (
     <Container>
@@ -24,6 +23,7 @@ export const RenderedProducts: FC = () => {
       {data?.map((each: any) => {
         return (
           <EachProduct
+            id={each.sys.id}
             key={each.fields.title}
             title={each.fields.title}
             imageUrl={each.fields.imageUrl}
