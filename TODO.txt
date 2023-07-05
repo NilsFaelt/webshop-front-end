@@ -10,5 +10,6 @@
 * mongo
 * display prodcutcard
 * detail product
+* add to cart
 * search
 * cart

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { styled } from "styled-components";
 
 export const Container = styled.header`
+  z-index: 3;
   position: fixed;
   top: 0;
   box-sizing: border-box;
