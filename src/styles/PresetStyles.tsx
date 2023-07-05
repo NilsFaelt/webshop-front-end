@@ -17,3 +17,7 @@ export const StyledLink = styled(Link)`
   color: black;
   text-decoration: none;
 `;
+export const Text = styled(Link)`
+  color: black;
+  font-size: calc(0.5rem + 0.5vw);
+`;
