@@ -13,3 +13,7 @@
 * add to cart
 * search
 * cart
+* calc total 
+* fix-design cart
+* grey div
+

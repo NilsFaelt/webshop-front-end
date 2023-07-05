@@ -33,7 +33,7 @@ export const EachProduct: FC<Props> = ({
           src={imageUrl && imageUrl}
         />
       </StyledLink>
-      <AddToCart price={price} title={title} id={id} />
+      <AddToCart price={price} title={title} id={id} imageUrl={imageUrl} />
       <Title>{title && title}</Title>
       <Price>€{price?.toFixed(2)} </Price>
       <StatusText>{status && status}</StatusText>

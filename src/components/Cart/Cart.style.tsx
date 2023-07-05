@@ -34,6 +34,31 @@ export const Container = styled(DivFlexedColumn)`
     width: 100%;
   }
 `;
+export const ItemsContainer = styled(DivFlexedColumn)`
+  width: 100%;
+  height: 23rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  overflow: scroll;
+`;
+export const ButtonContainer = styled(DivFlexedColumn)`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  border-top: 0.05rem solid black;
+  background-color: white;
+`;
+export const InfoContainerCheckout = styled(DivFlexedColumn)`
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: flex-start;
+  height: 5rem;
+  margin-left: 1rem;
+  gap: 0.5rem;
+`;
 export const CloseText = styled.p`
   position: absolute;
   z-index: 3;
@@ -50,10 +75,13 @@ export const CartText = styled.p`
   left: 1.5rem;
   top: 0rem;
 `;
+export const Text = styled.p`
+  font-size: calc(0.6rem + 0.2vw);
+`;
 
 export const InfoContainer = styled(DivFlexedRow)`
   font-size: 0.8rem;
-  margin-top: 4.4rem;
+  margin-top: 5rem;
   height: 2rem;
   width: 100%;
   border-top: solid 0.05rem grey;

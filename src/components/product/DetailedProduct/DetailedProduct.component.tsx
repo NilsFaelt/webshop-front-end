@@ -17,7 +17,7 @@ export const DetailedProduct: FC<Props> = ({ id }) => {
     <Container>
       <Title>{title}</Title>
       <StyledImage alt={title} src={imageUrl} />
-      <AddToCart price={price} id={id} title={title} />
+      <AddToCart price={price} id={id} title={title} imageUrl={imageUrl} />
     </Container>
   );
 };
