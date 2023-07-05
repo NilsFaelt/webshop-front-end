@@ -6,7 +6,7 @@ export const Container = styled(DivFlexedColumn)`
   margin-top: 1rem;
   flex: 1;
   max-width: 15rem;
-  cursor: pointer;
+
   @media (max-width: 500px) {
     width: 100%;
   }
@@ -14,6 +14,7 @@ export const Container = styled(DivFlexedColumn)`
 export const StyledImage = styled.img`
   height: 10rem;
   object-fit: cover;
+  cursor: pointer;
   @media (max-width: 500px) {
     width: 100vw;
     height: 15rem;

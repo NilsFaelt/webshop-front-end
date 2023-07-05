@@ -5,8 +5,6 @@ import { PageTitle } from "@/src/ui";
 import { EachProduct } from "@/src/components";
 
 export const AllProductsView: FC = () => {
-  const { data } = useProducts();
-
   return (
     <Container>
       <PageTitle title='OUR PRODUCTS' />
@@ -16,7 +14,6 @@ export const AllProductsView: FC = () => {
 };
 export const RenderedProducts: FC = () => {
   const { data } = useProducts();
-  console.log(data);
 
   return (
     <>

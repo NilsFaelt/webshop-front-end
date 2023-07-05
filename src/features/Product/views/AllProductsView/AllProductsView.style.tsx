@@ -9,7 +9,5 @@ export const ProductsContainer = styled(DivFlexedRow)`
   gap: 1rem;
   @media (max-width: 500px) {
     flex-direction: column;
-    margin-top: 50rem;
-    margin-bottom: 20rem;
   }
 `;

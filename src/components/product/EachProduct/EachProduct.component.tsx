@@ -8,6 +8,7 @@ import {
 } from "./EachProduct.style";
 
 import { StyledLink } from "@/src/styles";
+import { AddToCart } from "../AddToCart";
 
 interface Props {
   imageUrl: string;
@@ -25,16 +26,17 @@ export const EachProduct: FC<Props> = ({
   id,
 }) => {
   return (
-    <StyledLink href={`product/${id}`}>
-      <Container>
+    <Container>
+      <StyledLink href={`product/${id}`}>
         <StyledImage
           alt={title ? title : "product"}
           src={imageUrl && imageUrl}
         />
-        <Title>{title && title}</Title>
-        <Price>€{price?.toFixed(2)} </Price>
-        <StatusText>{status && status}</StatusText>
-      </Container>
-    </StyledLink>
+      </StyledLink>
+      <AddToCart price={price} title={title} id={id} />
+      <Title>{title && title}</Title>
+      <Price>€{price?.toFixed(2)} </Price>
+      <StatusText>{status && status}</StatusText>
+    </Container>
   );
 };

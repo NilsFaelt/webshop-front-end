@@ -1,6 +1,10 @@
+import { ProductType } from "@/src/types";
 import { useQuery } from "@tanstack/react-query";
 
-const fetchProduct = async (id: string, main: "true" | "false" = "false") => {
+const fetchProduct = async (
+  id: string,
+  main: "true" | "false" = "false"
+): Promise<ProductType> => {
   return fetch(`http://localhost:3000/product/${id}?main=${main}`, {
     method: "GET",
   })

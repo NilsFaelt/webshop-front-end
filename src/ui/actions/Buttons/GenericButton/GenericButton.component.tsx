@@ -4,7 +4,7 @@ import { Container, ContainerDisabled } from "./GenericButton.style";
 interface Props {
   disabled?: boolean;
   text: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const GenericButton: FC<Props> = ({

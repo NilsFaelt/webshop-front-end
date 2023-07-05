@@ -13,4 +13,3 @@
 * add to cart
 * search
 * cart
-* Add type return product

@@ -16,18 +16,17 @@ interface Props {
 export const ProductDisplayBig: FC<Props> = ({ textColor = "black" }) => {
   const { data } = useProduct("none", "true");
   const router = useRouter();
-  if (!data?.[0]?.fields) return;
-  console.log(data);
-  const { url, title, infoText, underTitle, urlId } = data?.[0].fields;
+  if (!data?.fields) return;
+  const { imageUrl, title, info, underTitle, urlId } = data?.fields;
   const handleClick = () => {
     router.push(`product/${urlId}`);
   };
   return (
-    <Container $imageurl={url}>
+    <Container $imageurl={imageUrl}>
       <TextContainer color={textColor}>
         <MainText>{title}</MainText>
         <UnderText>{underTitle && underTitle}</UnderText>
-        <InfoText>{infoText && infoText}</InfoText>
+        <InfoText>{info && info}</InfoText>
       </TextContainer>
 
       <GenericButton onClick={handleClick} text='DISCOVER MORE' />

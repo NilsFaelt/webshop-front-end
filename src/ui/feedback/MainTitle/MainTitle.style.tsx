@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export const Container = styled(DivFlexedColumn)`
   align-items: center;
+  margin-left: 2rem;
 `;
 export const Title = styled.h1`
   font-size: calc(0.8rem + 0.5vw);
