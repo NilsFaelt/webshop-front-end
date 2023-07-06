@@ -22,7 +22,7 @@ export const AddToCart: FC<Props> = ({ id, price, title, imageUrl }) => {
     title,
     imageUrl,
   };
-  console.log(payLoad);
+
   const handleAdd = () => {
     setTotal((prev) => prev + 1);
   };

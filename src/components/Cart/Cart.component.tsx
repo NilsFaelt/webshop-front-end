@@ -12,12 +12,13 @@ import {
 } from "./Cart.style";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { toogleCart } from "@/src/redux/slices";
+import { toogleCart, updateCartFromLocalStorage } from "@/src/redux/slices";
 import { useCloseOnClickOutsideElement } from "@/src/hooks";
 import { RootState } from "@/src/redux";
 import { EachCartItem } from "./components";
 import { GenericButton } from "@/src/ui";
 import { calculateTotalPrice } from "./utils/calculateTotalPrice";
+import { getCartFromLocalStorage } from "./utils";
 
 export const Cart: FC = () => {
   const items = useSelector((state: RootState) => state.cart);
@@ -26,9 +27,13 @@ export const Cart: FC = () => {
   const hanldeDispatch = () => {
     dispatch(toogleCart());
   };
-
+  const localStoredCart = getCartFromLocalStorage();
+  console.log(items.length, " items");
+  if (items.length < 1) {
+    dispatch(updateCartFromLocalStorage(localStoredCart));
+    console.log(localStoredCart, "local cart");
+  }
   const totalPrice = calculateTotalPrice(items);
-  console.log(totalPrice);
 
   useCloseOnClickOutsideElement(menuRef, hanldeDispatch);
   return (

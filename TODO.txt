@@ -1,20 +1,18 @@
 * redux
 * tanstack
 * footer
-* menu
 * login
 * contentful
 * nest 
 * jwt
 * prisma
 * mongo
-* display prodcutcard
+* imgae carousel 
+* product carousel 
 * detail product
-* add to cart
 * search
 * cart
-* calc total 
 * fix-design cart
-* cart localstorage
+
 
 

@@ -1,3 +1,7 @@
+import {
+  getCartFromLocalStorage,
+  saveCartToLocalStorage,
+} from "@/src/components";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
@@ -15,40 +19,57 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    updateCartFromLocalStorage: (state, action: PayloadAction<CartState[]>) => {
+      console.log(action.payload, "payloads");
+      return (state = action.payload);
+    },
     addItem: (state, action: PayloadAction<CartState>) => {
       const newItem = action.payload;
       const existingItem = state.find((item) => item.id === newItem.id);
 
       if (existingItem) {
         existingItem.total += newItem.total;
+        saveCartToLocalStorage(state);
       } else {
         state.push(newItem);
+        saveCartToLocalStorage(state);
       }
     },
     removeItem: (state, action: PayloadAction<{ id: string }>) => {
-      console.log(action.payload.id);
-      return state.filter((each) => each.id !== action.payload.id);
+      const updatedState = state.filter(
+        (each) => each.id !== action.payload.id
+      );
+      saveCartToLocalStorage(updatedState);
+      return updatedState;
     },
     updateTotalPlus: (state, action: PayloadAction<{ id: string }>) => {
-      return state.map((item) => {
+      const updatedState = state.map((item) => {
         if (item.id === action.payload.id) {
           return { ...item, total: item.total + 1 };
         }
         return item;
       });
+      saveCartToLocalStorage(updatedState);
+      return updatedState;
     },
     updateTotalMinus: (state, action: PayloadAction<{ id: string }>) => {
       const item = state.find((each) => each.id === action.payload.id);
-      console.log(item);
+
       if (item?.total === 1) {
-        return state.filter((each) => each.id !== action.payload.id);
+        const updatedState = state.filter(
+          (each) => each.id !== action.payload.id
+        );
+        saveCartToLocalStorage(updatedState);
+        return updatedState;
       }
-      return state.map((item) => {
+      const updatedState = state.map((item) => {
         if (item.id === action.payload.id && item.total > 0) {
           return { ...item, total: item.total - 1 };
         }
         return item;
       });
+      saveCartToLocalStorage(updatedState);
+      return updatedState;
     },
     clearCart: () => [],
   },
@@ -60,6 +81,7 @@ export const {
   clearCart,
   updateTotalMinus,
   updateTotalPlus,
+  updateCartFromLocalStorage,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
