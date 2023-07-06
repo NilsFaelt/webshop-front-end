@@ -3,3 +3,4 @@ export * from "./Product";
 export * from "./Menu";
 export * from "./SearchBar";
 export * from "./Cart";
+export * from "./FadedBackground";

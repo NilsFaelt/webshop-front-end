@@ -33,9 +33,9 @@ export const Menu: FC = () => {
     <Container ref={menuRef}>
       <CloseText onClick={() => dispatch(toogleMenu())}>X</CloseText>
       <NavContainer>
-        <EachNav innerLink={navOneLinks} text='Login' />
         <EachNav innerLink={navTwoLinks} text='Shop' />
         <EachNav innerLink={navThreeLinks} text='About' />
+        <EachNav innerLink={navOneLinks} text='Login' />
       </NavContainer>
     </Container>
   );

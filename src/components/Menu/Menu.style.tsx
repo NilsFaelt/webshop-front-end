@@ -33,6 +33,7 @@ export const Container = styled.nav`
     width: 100%;
   }
 `;
+
 export const NavContainer = styled(DivFlexedColumn)`
   margin-top: 8rem;
   align-self: center;

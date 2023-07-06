@@ -81,7 +81,7 @@ export const Text = styled.p`
 
 export const InfoContainer = styled(DivFlexedRow)`
   font-size: 0.8rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
   height: 2rem;
   width: 100%;
   border-top: solid 0.05rem grey;

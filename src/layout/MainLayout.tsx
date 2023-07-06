@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import { Container } from "./MainLayout.style";
-import { Cart, Header, Menu } from "../components";
+import { Cart, FadedBackground, Header, Menu } from "../components";
 import { useSelector } from "react-redux";
 import { RootState } from "@/src/redux";
 
@@ -13,6 +13,8 @@ export const MainLayout: FC<Props> = ({ children }) => {
   const cartActive = useSelector((state: RootState) => state.menu.toogleCart);
   return (
     <Container>
+      {menuActive && <FadedBackground />}
+      {cartActive && <FadedBackground />}
       {menuActive && <Menu />}
       {cartActive && <Cart />}
       <Header />

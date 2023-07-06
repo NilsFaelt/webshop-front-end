@@ -17,6 +17,7 @@ import { useCloseOnClickOutsideElement } from "@/src/hooks";
 import { RootState } from "@/src/redux";
 import { EachCartItem } from "./components";
 import { GenericButton } from "@/src/ui";
+import { calculateTotalPrice } from "./utils/calculateTotalPrice";
 
 export const Cart: FC = () => {
   const items = useSelector((state: RootState) => state.cart);
@@ -25,6 +26,9 @@ export const Cart: FC = () => {
   const hanldeDispatch = () => {
     dispatch(toogleCart());
   };
+
+  const totalPrice = calculateTotalPrice(items);
+  console.log(totalPrice);
 
   useCloseOnClickOutsideElement(menuRef, hanldeDispatch);
   return (
@@ -48,7 +52,7 @@ export const Cart: FC = () => {
         <InfoContainerCheckout>
           <Text>Free Shipping after 100€</Text>
         </InfoContainerCheckout>
-        <GenericButton text={`CHECKOUT • ${100} €`} />
+        <GenericButton text={`CHECKOUT • ${totalPrice} €`} />
       </ButtonContainer>
     </Container>
   );

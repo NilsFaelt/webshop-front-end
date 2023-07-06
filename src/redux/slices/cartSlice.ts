@@ -38,6 +38,11 @@ export const cartSlice = createSlice({
       });
     },
     updateTotalMinus: (state, action: PayloadAction<{ id: string }>) => {
+      const item = state.find((each) => each.id === action.payload.id);
+      console.log(item);
+      if (item?.total === 1) {
+        return state.filter((each) => each.id !== action.payload.id);
+      }
       return state.map((item) => {
         if (item.id === action.payload.id && item.total > 0) {
           return { ...item, total: item.total - 1 };
