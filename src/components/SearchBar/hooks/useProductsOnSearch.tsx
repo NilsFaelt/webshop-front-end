@@ -15,9 +15,9 @@ const fetchProducts = async (
     });
 };
 
-export const useProducts = (searchArgs?: string) => {
+export const useProductsOnSearch = (searchArgs?: string) => {
   return useQuery({
-    queryKey: ["products"],
+    queryKey: ["productsOnSearch"],
     queryFn: () => fetchProducts(searchArgs),
   });
 };

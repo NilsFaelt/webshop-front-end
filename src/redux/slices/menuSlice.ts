@@ -33,9 +33,16 @@ export const menuSlice = createSlice({
       state.toogleMenu = false;
       state.toogleSearch = false;
     },
+    closeAll: (state) => {
+      state.toogleSearch = false;
+      state.toogleCart = false;
+      state.toogleMenu = false;
+      console.log(state);
+    },
   },
 });
 
-export const { toogleMenu, toogleSearch, toogleCart } = menuSlice.actions;
+export const { toogleMenu, toogleSearch, toogleCart, closeAll } =
+  menuSlice.actions;
 
 export default menuSlice.reducer;

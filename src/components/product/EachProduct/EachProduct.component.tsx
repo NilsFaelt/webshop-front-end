@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import {
   Container,
   StyledImage,
@@ -14,8 +14,8 @@ interface Props {
   imageUrl: string;
   title: string;
   price: number;
-  status?: string;
   id: string;
+  status?: string;
 }
 
 export const EachProduct: FC<Props> = ({
@@ -27,7 +27,7 @@ export const EachProduct: FC<Props> = ({
 }) => {
   return (
     <Container>
-      <StyledLink href={`product/${id}`}>
+      <StyledLink href={`/product/${id}`}>
         <StyledImage
           alt={title ? title : "product"}
           src={imageUrl && imageUrl}

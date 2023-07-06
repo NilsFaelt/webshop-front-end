@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useRef } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import {
   CloseText,
   Container,
@@ -28,12 +28,14 @@ export const Cart: FC = () => {
     dispatch(toogleCart());
   };
   const localStoredCart = getCartFromLocalStorage();
-  console.log(items.length, " items");
-  if (items.length < 1) {
-    dispatch(updateCartFromLocalStorage(localStoredCart));
-    console.log(localStoredCart, "local cart");
-  }
   const totalPrice = calculateTotalPrice(items);
+
+  useEffect(() => {
+    if (items.length < 1) {
+      dispatch(updateCartFromLocalStorage(localStoredCart));
+      console.log(localStoredCart, "local cart");
+    }
+  }, []);
 
   useCloseOnClickOutsideElement(menuRef, hanldeDispatch);
   return (

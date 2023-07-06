@@ -9,7 +9,6 @@ import { EachNav } from "./EachNav";
 
 export const Menu: FC = () => {
   const dispatch = useDispatch();
-  const menuActive = useSelector((state: RootState) => state.menu.toogleMenu);
 
   const menuRef = useRef(null);
   const hanldeDispatch = () => {

@@ -1,5 +1,5 @@
-* redux
-* tanstack
+
+
 * footer
 * login
 * contentful
@@ -13,6 +13,7 @@
 * search
 * cart
 * fix-design cart
+* Type backedn promise
 
 
 

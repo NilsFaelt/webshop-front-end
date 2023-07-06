@@ -20,7 +20,6 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     updateCartFromLocalStorage: (state, action: PayloadAction<CartState[]>) => {
-      console.log(action.payload, "payloads");
       return (state = action.payload);
     },
     addItem: (state, action: PayloadAction<CartState>) => {

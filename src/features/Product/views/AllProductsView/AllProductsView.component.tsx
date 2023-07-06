@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Container, ProductsContainer } from "./AllProductsView.style";
 import { useProducts } from "../../hooks";
 import { PageTitle } from "@/src/ui";
-import { EachProduct } from "@/src/components";
+import { EachProduct, SearchBar } from "@/src/components";
 
 export const AllProductsView: FC = () => {
   return (

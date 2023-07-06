@@ -6,9 +6,11 @@ export const Container = styled(DivFlexedRow)`
   height: 3rem;
   gap: 1rem;
   margin-left: 1.7rem;
+  width: 100%;
 `;
 export const StyledInput = styled.input`
   height: 2rem;
+  width: 100%;
   border: none;
   font-size: 1rem;
   &:focus {

@@ -1,0 +1,1 @@
+export { useProductsOnSearch } from "./useProductsOnSearch";
