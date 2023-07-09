@@ -1,18 +1,16 @@
 * footer
 * login
-* contentful
 * nest 
 * jwt
-* prisma
 * mongo
-* imgae carousel 
-* product carousel 
+* display images and related products
 * detail product
-* search
-* cart
+* cart styleing/scroll
 * fix-design cart
 * Type backedn promise
 * clear cookies on loggout
-
-
+* get user 
+* create decoraot fot cookies
+* strip 
+* klarna
 

@@ -8,6 +8,7 @@ export interface ProductType {
     title: string;
     underTitle: string;
     urlId?: string;
+    images?: string[];
   };
   sys: { id: string };
 }

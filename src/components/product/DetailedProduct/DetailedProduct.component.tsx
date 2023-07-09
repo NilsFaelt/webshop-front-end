@@ -1,10 +1,15 @@
 import { useProduct } from "@/src/features/Product/hooks";
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import {
   Container,
   StyledImage,
   Title,
   InfoContainer,
+  ImagesContainerWrapper,
+  Underline,
+  Price,
+  ImagesContainer,
+  StyledImageSmall,
 } from "./DetailedProduct.style";
 import { AddToCart } from "../AddToCart";
 import { useDispatch } from "react-redux";
@@ -15,6 +20,7 @@ interface Props {
 }
 
 export const DetailedProduct: FC<Props> = ({ id }) => {
+  const [bigImageurl, setBigImageurl] = useState<null | string>("");
   const dispatch = useDispatch();
   const { data } = useProduct(id);
 
@@ -22,16 +28,33 @@ export const DetailedProduct: FC<Props> = ({ id }) => {
     dispatch(closeAll());
   }, []);
   if (!data) return <Title>Loading...</Title>;
-  const { title, imageUrl, price, info } = data.fields;
+  const { title, imageUrl, price, info, images } = data.fields;
 
   return (
     <Container>
-      <Title>{title}</Title>
-      <StyledImage alt={title} src={imageUrl} />
-      <AddToCart price={price} id={id} title={title} imageUrl={imageUrl} />
-
+      <ImagesContainerWrapper>
+        <StyledImage alt={title} src={bigImageurl ? bigImageurl : imageUrl} />
+        <ImagesContainer>
+          {images?.map((each, i) => {
+            return (
+              <StyledImageSmall
+                onMouseOver={() => setBigImageurl(each)}
+                onMouseOut={() => setBigImageurl(null)}
+                key={i}
+                src={each}
+              />
+            );
+          })}
+        </ImagesContainer>
+      </ImagesContainerWrapper>
       <InfoContainer>
-        <Text>{info}</Text>
+        <>
+          <Title>{title}</Title>
+          <Price>{price.toFixed(2)} €</Price>
+          <Underline />
+          <Text>{info}</Text>
+        </>
+        <AddToCart price={price} id={id} title={title} imageUrl={imageUrl} />
       </InfoContainer>
     </Container>
   );

@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import { Container, TextContainer, Text, Span } from "./Login.style";
-import { GenericButton, Input } from "@/src/ui/actions";
+import { GenericButton, Input, SignOut } from "@/src/ui/actions";
 import { isValidEmail } from "@/src/utils";
 import { useMutateLogin } from "../../hooks/useMutateLogin";
 
@@ -49,6 +49,7 @@ export const Login: FC = () => {
           Create <Span>Account?</Span>
         </Text>
       </TextContainer>
+      <SignOut />
     </Container>
   );
 };

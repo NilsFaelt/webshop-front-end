@@ -9,15 +9,16 @@ import {
   NavBox,
   ChevronImage,
 } from "./Carousel.style";
-import { useProductsOnSearch } from "../SearchBar/hooks";
+
 import { StyledLink } from "@/src/styles";
+import { useProducts } from "@/src/features/Product/hooks";
 interface Props {
   category?: string;
 }
 
 export const Carousel: FC<Props> = ({ category }) => {
   const [indexCount, setindexCount] = useState(0);
-  const { data } = useProductsOnSearch();
+  const { data } = useProducts();
   if (!data) return null;
 
   const handleClickRight = () => {
