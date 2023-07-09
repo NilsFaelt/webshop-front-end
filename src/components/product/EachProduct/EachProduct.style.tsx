@@ -6,7 +6,6 @@ export const Container = styled(DivFlexedColumn)`
   margin-top: 1rem;
   flex: 1;
   max-width: 15rem;
-
   @media (max-width: 500px) {
     width: 100%;
   }

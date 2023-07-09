@@ -1,5 +1,3 @@
-
-
 * footer
 * login
 * contentful
@@ -14,6 +12,7 @@
 * cart
 * fix-design cart
 * Type backedn promise
+* clear cookies on loggout
 
 
 

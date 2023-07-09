@@ -1,10 +1,8 @@
 import { ProductType } from "@/src/types";
 import { useQuery } from "@tanstack/react-query";
 
-const fetchProducts = async (
-  searchArgs: string = ""
-): Promise<ProductType[]> => {
-  return fetch(`http://localhost:3000/product?searchArgs=${searchArgs}`, {
+const fetchProducts = async (title: string = ""): Promise<ProductType[]> => {
+  return fetch(`http://localhost:3000/product?title=${title}`, {
     method: "GET",
   })
     .then((res) => {
@@ -15,9 +13,9 @@ const fetchProducts = async (
     });
 };
 
-export const useProductsOnSearch = (searchArgs?: string) => {
+export const useProductsOnSearch = (title?: string) => {
   return useQuery({
     queryKey: ["productsOnSearch"],
-    queryFn: () => fetchProducts(searchArgs),
+    queryFn: () => fetchProducts(title),
   });
 };

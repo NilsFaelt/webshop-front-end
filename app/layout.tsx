@@ -21,13 +21,12 @@ export default function RootLayout({
     <html lang='en'>
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
-          <body className={aBeeZee.className}>
-            <StyledComponentsRegistry>
-              {" "}
+          <StyledComponentsRegistry>
+            <body className={aBeeZee.className}>
               <GlobalStyles />
               {children}
-            </StyledComponentsRegistry>
-          </body>
+            </body>
+          </StyledComponentsRegistry>
         </QueryClientProvider>
       </Provider>
     </html>

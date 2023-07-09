@@ -1,13 +1,5 @@
-import React, { FC, useEffect, useRef, useState } from "react";
-import {
-  Container,
-  LoginContainer,
-  TextContainer,
-  Title,
-  Text,
-  Span,
-} from "./LoginView.style";
-import { GenericButton, Input } from "@/src/ui/actions";
+import React, { FC } from "react";
+import { Container, Title } from "./LoginView.style";
 import { Login } from "../components";
 
 export const LoginView: FC = () => {

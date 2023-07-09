@@ -1,7 +1,4 @@
-import {
-  getCartFromLocalStorage,
-  saveCartToLocalStorage,
-} from "@/src/components";
+import { saveCartToLocalStorage } from "@/src/components";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 

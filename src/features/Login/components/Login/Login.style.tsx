@@ -1,4 +1,4 @@
-import { DivFlexedColumn, theme } from "@/src/styles";
+import { theme } from "@/src/styles";
 import { styled } from "styled-components";
 
 export const Container = styled.form`
@@ -9,6 +9,7 @@ export const Container = styled.form`
   background-color: white;
   gap: 1rem;
   padding: 4rem;
+  margin-bottom: 2rem;
 `;
 export const TextContainer = styled.div`
   display: flex;

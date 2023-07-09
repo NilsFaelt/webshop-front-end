@@ -5,6 +5,9 @@ export const Container = styled(DivFlexedColumn)`
   margin-bottom: 10rem;
   gap: 1rem;
 `;
+export const InfoContainer = styled(DivFlexedColumn)`
+  width: clamp(15rem, 80%, 40rem);
+`;
 export const StyledImage = styled.img`
   width: calc(20rem + 30vw);
   height: 80vh;
