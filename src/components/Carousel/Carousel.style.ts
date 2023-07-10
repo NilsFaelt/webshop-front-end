@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
 export const Container = styled(DivFlexedRow)`
   gap: 1rem;
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     width: 100vw;
   }
 `;
@@ -12,13 +12,13 @@ export const ItemContainer = styled(DivFlexedColumn)`
   width: calc(8rem + 8vw);
   height: auto;
   align-items: flex-start;
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     height: 10rem;
   }
 `;
 export const InofContainer = styled(DivFlexedColumn)`
   align-items: flex-start;
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     height: 10rem;
   }
 `;

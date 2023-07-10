@@ -5,12 +5,10 @@
 * mongo
 * display images and related products
 * detail product
-* cart styleing/scroll
-* fix-design cart
-* Type backedn promise
+* Type backend promise
 * clear cookies on loggout
 * get user 
 * create decoraot fot cookies
-* strip 
+* stripe 
 * klarna
 * you may also like

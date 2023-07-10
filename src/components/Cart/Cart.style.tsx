@@ -36,16 +36,17 @@ export const Container = styled(DivFlexedColumn)`
 `;
 export const ItemsContainer = styled(DivFlexedColumn)`
   width: 100%;
-  height: 23rem;
+  height: 100%;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
   margin-top: 2rem;
-  align-items: flex-start;
   overflow: scroll;
 `;
 export const ButtonContainer = styled(DivFlexedColumn)`
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
   padding-bottom: 2rem;
   padding-top: 2rem;
   border-top: 0.05rem solid black;
