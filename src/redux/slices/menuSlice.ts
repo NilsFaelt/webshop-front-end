@@ -36,7 +36,6 @@ export const menuSlice = createSlice({
       state.toogleSearch = false;
       state.toogleCart = false;
       state.toogleMenu = false;
-      console.log(state);
     },
   },
 });

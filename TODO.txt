@@ -1,6 +1,5 @@
 * footer
 * login
-* nest 
 * jwt
 * mongo
 * display images and related products
@@ -8,7 +7,8 @@
 * Type backend promise
 * clear cookies on loggout
 * get user 
-* create decoraot fot cookies
+* create decorator fot cookies
 * stripe 
 * klarna
 * you may also like
+* order by category

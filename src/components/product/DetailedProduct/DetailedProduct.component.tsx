@@ -15,6 +15,7 @@ import { AddToCart } from "../AddToCart";
 import { useDispatch } from "react-redux";
 import { closeAll } from "@/src/redux/slices";
 import { Text } from "@/src/styles";
+import { YouMayAlsoLike } from "../../YouMayAlsoLike";
 interface Props {
   id: string;
 }
@@ -56,6 +57,7 @@ export const DetailedProduct: FC<Props> = ({ id }) => {
         </>
         <AddToCart price={price} id={id} title={title} imageUrl={imageUrl} />
       </InfoContainer>
+      <YouMayAlsoLike />
     </Container>
   );
 };
