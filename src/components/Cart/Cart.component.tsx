@@ -10,8 +10,7 @@ import {
   InfoContainerCheckout,
   Text,
 } from "./Cart.style";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toogleCart, updateCartFromLocalStorage } from "@/src/redux/slices";
 import { useCloseOnClickOutsideElement } from "@/src/hooks";
 import { RootState } from "@/src/redux";

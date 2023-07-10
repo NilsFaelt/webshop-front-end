@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import { Container, ImageAndLoginWrapper } from "./Header.style";
-import { useSelector } from "react-redux";
 import { RootState } from "@/src/redux";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
   BurgerMenuButton,

@@ -1,1 +1,2 @@
-export * from "./updateCartLocalStorage";
+export * from "./clearCartFromLocalSorage";
+export * from "./getCartFromLocalStorage";

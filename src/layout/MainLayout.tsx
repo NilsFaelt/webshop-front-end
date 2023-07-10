@@ -3,6 +3,7 @@ import { Container } from "./MainLayout.style";
 import { Cart, FadedBackground, Header, Menu } from "../components";
 import { useSelector } from "react-redux";
 import { RootState } from "@/src/redux";
+import { Footer } from "../components/Footer";
 
 interface Props {
   children: ReactNode;
@@ -19,6 +20,7 @@ export const MainLayout: FC<Props> = ({ children }) => {
       {cartActive && <Cart />}
       <Header />
       {children}
+      <Footer />
     </Container>
   );
 };

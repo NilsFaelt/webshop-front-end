@@ -2,8 +2,7 @@ import React, { FC, useState } from "react";
 import { AmountContainer, Container, PlusMinusText } from "./AddToCart.style";
 import { GenericButton } from "@/src/ui";
 import { useDispatch } from "react-redux";
-import { addItem } from "@/src/redux/slices";
-import { toogleCart } from "@/src/redux/slices";
+import { toogleCart, addItem } from "@/src/redux/slices";
 interface Props {
   id: string;
   price: number;

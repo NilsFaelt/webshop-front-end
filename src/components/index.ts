@@ -5,3 +5,4 @@ export * from "./SearchBar";
 export * from "./Cart";
 export * from "./FadedBackground";
 export * from "./Carousel";
+export * from "./YouMayAlsoLike";

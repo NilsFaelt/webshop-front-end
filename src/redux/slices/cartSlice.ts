@@ -1,4 +1,3 @@
-import { saveCartToLocalStorage } from "@/src/components";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
@@ -25,17 +24,18 @@ export const cartSlice = createSlice({
 
       if (existingItem) {
         existingItem.total += newItem.total;
-        saveCartToLocalStorage(state);
+        localStorage.setItem("myCart", JSON.stringify(state));
       } else {
         state.push(newItem);
-        saveCartToLocalStorage(state);
+        localStorage.setItem("myCart", JSON.stringify(state));
       }
+      return state;
     },
     removeItem: (state, action: PayloadAction<{ id: string }>) => {
       const updatedState = state.filter(
         (each) => each.id !== action.payload.id
       );
-      saveCartToLocalStorage(updatedState);
+      localStorage.setItem("myCart", JSON.stringify(updatedState));
       return updatedState;
     },
     updateTotalPlus: (state, action: PayloadAction<{ id: string }>) => {
@@ -45,7 +45,7 @@ export const cartSlice = createSlice({
         }
         return item;
       });
-      saveCartToLocalStorage(updatedState);
+      localStorage.setItem("myCart", JSON.stringify(updatedState));
       return updatedState;
     },
     updateTotalMinus: (state, action: PayloadAction<{ id: string }>) => {
@@ -55,7 +55,7 @@ export const cartSlice = createSlice({
         const updatedState = state.filter(
           (each) => each.id !== action.payload.id
         );
-        saveCartToLocalStorage(updatedState);
+        localStorage.setItem("myCart", JSON.stringify(updatedState));
         return updatedState;
       }
       const updatedState = state.map((item) => {
@@ -64,7 +64,7 @@ export const cartSlice = createSlice({
         }
         return item;
       });
-      saveCartToLocalStorage(updatedState);
+      localStorage.setItem("myCart", JSON.stringify(updatedState));
       return updatedState;
     },
     clearCart: () => [],
