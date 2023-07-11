@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Container } from "./SingleProductView.style";
-import { useProduct } from "../../hooks";
 import { DetailedProduct } from "@/src/components";
 
 interface Props {

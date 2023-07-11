@@ -25,6 +25,7 @@ export const EachProduct: FC<Props> = ({
   status,
   id,
 }) => {
+  const displayStatus = status !== undefined && status?.length > 0;
   return (
     <Container>
       <StyledLink href={`/product/${id}`}>
@@ -36,7 +37,7 @@ export const EachProduct: FC<Props> = ({
       <AddToCart price={price} title={title} id={id} imageUrl={imageUrl} />
       <Title>{title && title}</Title>
       <Price>€{price?.toFixed(2)} </Price>
-      <StatusText>{status && status}</StatusText>
+      {displayStatus && <StatusText>{status}</StatusText>}
     </Container>
   );
 };

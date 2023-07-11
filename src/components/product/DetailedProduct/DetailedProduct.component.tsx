@@ -10,6 +10,7 @@ import {
   Price,
   ImagesContainer,
   StyledImageSmall,
+  InnerContainer,
 } from "./DetailedProduct.style";
 import { AddToCart } from "../AddToCart";
 import { useDispatch } from "react-redux";
@@ -29,35 +30,37 @@ export const DetailedProduct: FC<Props> = ({ id }) => {
     dispatch(closeAll());
   }, []);
   if (!data) return <Title>Loading...</Title>;
-  const { title, imageUrl, price, info, images } = data.fields;
+  const { title, imageUrl, price, info, images, category } = data.fields;
 
   return (
     <Container>
-      <ImagesContainerWrapper>
-        <StyledImage alt={title} src={bigImageurl ? bigImageurl : imageUrl} />
-        <ImagesContainer>
-          {images?.map((each, i) => {
-            return (
-              <StyledImageSmall
-                onMouseOver={() => setBigImageurl(each)}
-                onMouseOut={() => setBigImageurl(null)}
-                key={i}
-                src={each}
-              />
-            );
-          })}
-        </ImagesContainer>
-      </ImagesContainerWrapper>
-      <InfoContainer>
-        <>
-          <Title>{title}</Title>
-          <Price>{price.toFixed(2)} €</Price>
-          <Underline />
-          <Text>{info}</Text>
-        </>
-        <AddToCart price={price} id={id} title={title} imageUrl={imageUrl} />
-      </InfoContainer>
-      <YouMayAlsoLike />
+      <InnerContainer>
+        <ImagesContainerWrapper>
+          <StyledImage alt={title} src={bigImageurl ? bigImageurl : imageUrl} />
+          <ImagesContainer>
+            {images?.map((each, i) => {
+              return (
+                <StyledImageSmall
+                  onMouseOver={() => setBigImageurl(each)}
+                  onMouseOut={() => setBigImageurl(null)}
+                  key={i}
+                  src={each}
+                />
+              );
+            })}
+          </ImagesContainer>
+        </ImagesContainerWrapper>
+        <InfoContainer>
+          <>
+            <Title>{title}</Title>
+            <Price>{price.toFixed(2)} €</Price>
+            <Underline />
+            <Text>{info}</Text>
+          </>
+          <AddToCart price={price} id={id} title={title} imageUrl={imageUrl} />
+        </InfoContainer>
+      </InnerContainer>
+      <YouMayAlsoLike category={category} mainProductId={id} />
     </Container>
   );
 };

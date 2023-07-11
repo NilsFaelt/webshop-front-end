@@ -9,6 +9,7 @@ export interface ProductType {
     underTitle: string;
     urlId?: string;
     images?: string[];
+    category: string[];
   };
   sys: { id: string };
 }

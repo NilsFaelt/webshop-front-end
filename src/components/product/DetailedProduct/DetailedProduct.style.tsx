@@ -1,11 +1,19 @@
 import { DivFlexedColumn, DivFlexedRow, theme } from "@/src/styles";
 import { styled } from "styled-components";
 
-export const Container = styled(DivFlexedRow)`
+export const Container = styled(DivFlexedColumn)`
   margin-top: 5rem;
   margin-bottom: 10rem;
   gap: 1rem;
+  align-items: center;
+`;
+export const InnerContainer = styled(DivFlexedRow)`
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  gap: 1rem;
   align-items: flex-start;
+  border-bottom: 0.05rem solid black;
+  padding-bottom: 4rem;
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;

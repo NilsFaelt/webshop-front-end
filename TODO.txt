@@ -1,14 +1,12 @@
-* footer
+* footer add links 
+* about
 * login
 * jwt
 * mongo
-* display images and related products
-* detail product
 * Type backend promise
 * clear cookies on loggout
 * get user 
 * create decorator fot cookies
 * stripe 
 * klarna
-* you may also like
-* order by category
+
