@@ -3,10 +3,10 @@
 * login
 * jwt
 * mongo
-* Type backend promise
 * clear cookies on loggout
 * get user 
-* create decorator fot cookies
+* create decorator for cookies
 * stripe 
 * klarna
-
+* make the site alive
+* create user

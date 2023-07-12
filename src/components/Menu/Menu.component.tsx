@@ -21,11 +21,11 @@ export const Menu: FC = () => {
   ];
   const navTwoLinks = [
     { name: "Products", url: "/product" },
-    { name: "Sign out", url: "sign-in" },
+    { name: "Search", url: "sign-in" },
   ];
   const navThreeLinks = [
-    { name: "Sign in", url: "sign-in" },
-    { name: "Sign out", url: "sign-in" },
+    { name: "About", url: "/about" },
+    { name: "Contact", url: "/about" },
   ];
   useCloseOnClickOutsideElement(menuRef, hanldeDispatch);
   return (

@@ -15,7 +15,7 @@ export const SearchBar: FC = () => {
     inputRef.current?.focus();
   }, []);
 
-  const debounceValue = useDebounce(searchInput, 1000);
+  const debounceValue = useDebounce(searchInput, 500);
   const { refetch, data } = useProductsOnSearch(debounceValue.value);
   const activateDropDown = data?.[0];
 

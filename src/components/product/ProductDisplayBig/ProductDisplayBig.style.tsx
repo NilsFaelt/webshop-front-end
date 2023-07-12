@@ -1,6 +1,15 @@
-import { styled } from "styled-components";
+import { keyframes, styled } from "styled-components";
 import { DivFlexedColumn } from "@/src/styles";
-import { theme } from "@/src/styles";
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
 export const Container = styled(DivFlexedColumn)<{ $imageurl: string }>`
   align-items: flex-start;
   box-sizing: border-box;
@@ -10,6 +19,7 @@ export const Container = styled(DivFlexedColumn)<{ $imageurl: string }>`
   padding: 2rem;
   width: 100%;
   height: 80vh;
+  animation: ${fadeIn} 1s ease-in;
 `;
 
 export const TextContainer = styled(DivFlexedColumn)`

@@ -53,7 +53,7 @@ export const Carousel: FC<Props> = ({ category }) => {
             </StyledLink>
             <InofContainer>
               <Title>{each.fields.title}</Title>
-              <Price>{each.fields.price} €</Price>
+              <Price>{each.fields.price.toFixed(2)} €</Price>
             </InofContainer>
           </ItemContainer>
         );

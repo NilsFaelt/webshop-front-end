@@ -43,6 +43,7 @@ export const ImagesContainer = styled(DivFlexedRow)`
 export const StyledImage = styled.img`
   width: calc(20rem + 20vw);
   object-fit: cover;
+
   @media (max-width: 900px) {
     height: 60vh;
     width: 100vw;
